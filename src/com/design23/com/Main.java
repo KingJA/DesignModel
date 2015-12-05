@@ -1,5 +1,7 @@
 package com.design23.com;
 
+import java.util.LinkedList;
+
 import com.design23.com.builder.Person;
 import com.design23.com.builder.Person.Gender;
 import com.design23.com.single.SingleInstanceDCL;
@@ -13,7 +15,7 @@ import com.design23.com.single.SingleInstanceDCL;
  */
 public class Main {
 	public static void main(String[] args) {
-		testByPosition(1);
+//		testByPosition(1);
 	}
 
 	public static void testByPosition(int position) {
