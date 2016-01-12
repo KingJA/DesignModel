@@ -15,13 +15,14 @@ import com.design23.com.template_method.UserLogin;
 /**
  * @Name:
  * @author KingJA
- * @date 2015-11-15 обнГ2:35:45
+ * @date 2015-11-15 обнГ2:35:46
  * @version V1.0
  * @Description:
  */
 public class Main {
 	public static void main(String[] args) {
 //		testByPosition(3);
+		
 		SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 	System.out.println(simpleDateFormat.format(new Date()));
 	
