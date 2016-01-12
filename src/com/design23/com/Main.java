@@ -1,10 +1,16 @@
 package com.design23.com;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.LinkedList;
 
 import com.design23.com.builder.Person;
 import com.design23.com.builder.Person.Gender;
 import com.design23.com.single.SingleInstanceDCL;
+import com.design23.com.template_method.AdminLogin;
+import com.design23.com.template_method.TemplateLogin;
+import com.design23.com.template_method.UserLogin;
 
 /**
  * @Name:
@@ -15,7 +21,10 @@ import com.design23.com.single.SingleInstanceDCL;
  */
 public class Main {
 	public static void main(String[] args) {
-//		testByPosition(1);
+//		testByPosition(3);
+		SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+	System.out.println(simpleDateFormat.format(new Date()));
+	
 	}
 
 	public static void testByPosition(int position) {
@@ -28,10 +37,24 @@ public class Main {
 		case 2:
 			mBuilderTest();
 			break;
+			// 模板方法模式
+		case 3:
+			mTemplateMethodTest();
+			break;
 
 		default:
 			break;
 		}
+	}
+
+	/**
+	 * 3.模板方法模式
+	 */
+	private static void mTemplateMethodTest() {
+		TemplateLogin userLogin = new UserLogin();
+		TemplateLogin adminLogin = new AdminLogin();
+		userLogin.checkLogin("admin", "admin");
+		adminLogin.checkLogin("admin", "admin");
 	}
 
 	/**
